@@ -1,0 +1,29 @@
+@Override
+
+    public void onBackPressed () {
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(home.this);
+        builder.setMessage("Are you sure want to exit");
+        builder.setCancelable(true);
+
+
+        builder.setPositiveButton("YES",new DialogInterface.OnClickListener(){
+
+        @Override
+        public void onClick(DialogInterface dialogInterface, int i ){
+
+            finish();
+
+        }
+        } );
+        builder.setNegativeButton("NO!" ,new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        }  );
+         AlertDialog alertDialog = builder.create();
+
+        alertDialog.show();
+
+                 }
